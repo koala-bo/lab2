@@ -1,0 +1,25 @@
+VAR
+    cycleCounter : UDINT := 0;
+    enable : BOOL := FALSE;
+    direction : BOOL := FALSE;
+
+    startPosition : REAL := 50.0;
+    simReset : BOOL := TRUE;
+    doorPosition : REAL := 50.0;
+    motorSpeed : REAL := 0.0;
+    plant : SimDoorPlant;
+
+    inverterState : UINT := 16#0040;
+    s0 : BOOL := FALSE;
+    s1 : BOOL := FALSE;
+    s2 : BOOL := FALSE;
+    s3 : BOOL := FALSE;
+
+    rtInfo : RTInfo;
+    cycleTime : REAL := 0.0;
+    timingOK : BOOL := FALSE;
+
+    driveSM : DriveStateMashine;
+    doorSM : DoorStateMashine;
+    ledSM : LedStateMashine;
+END_VAR
